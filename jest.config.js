@@ -30,6 +30,7 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|sass|scss)$': '<rootDir>/__mocks__/styleMock.js'
   }
 }
