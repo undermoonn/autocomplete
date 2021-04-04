@@ -8,7 +8,7 @@
     &__item {
       @apply transition;
       @apply bg-gray-5;
-      @apply py-2 px-3 text-sm overflow-hidden overflow-ellipsis;
+      @apply py-2 px-3 text-sm overflow-hidden overflow-ellipsis text-left;
       @apply cursor-pointer;
 
       &-on {
