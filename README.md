@@ -14,16 +14,16 @@ yarn add vue3-fancy-autocomplete
 
 Usage
 
-```
+```vue
 <template>
   <AutoComplete
     v-model="result"
     :options="options"
     @input="handleInput"
   />
-<templete>
+</templete>
 
-<script>
+<script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { AutoComplete } from 'vue3-fancy-autocomplete'
 
@@ -41,7 +41,8 @@ export default defineComponent({
 
     return {
       result,
-      options
+      options,
+      handleInput
     }
   }
 })
