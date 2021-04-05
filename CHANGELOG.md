@@ -1,3 +1,9 @@
+## [0.0.7](https://github.com/undermoonn/autocomplete/compare/v0.0.6...v0.0.7) (2021-04-05)
+
+### Bug Fixes
+
+- workflows ([1e33b47](https://github.com/undermoonn/autocomplete/commit/1e33b47db61a9d50bfc438828440b54a3ec8eac4))
+
 ## [0.0.6](https://github.com/undermoonn/autocomplete/compare/v0.0.5...v0.0.6) (2021-04-05)
 
 ### Bug Fixes
