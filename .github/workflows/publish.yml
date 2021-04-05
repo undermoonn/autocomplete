@@ -14,8 +14,18 @@ jobs:
       - run: npm i
       - run: npm run test
 
-  publish:
+  build:
     needs: test
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - run: npm i
+      - run: npm run build
+
+  publish:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
