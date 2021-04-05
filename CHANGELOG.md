@@ -1,3 +1,9 @@
+## [0.0.10](https://github.com/undermoonn/autocomplete/compare/v0.0.9...v0.0.10) (2021-04-05)
+
+### Bug Fixes
+
+- use in product ([a203cf4](https://github.com/undermoonn/autocomplete/commit/a203cf4434753e2da3c1d201a1e122023c770bf2))
+
 ## [0.0.9](https://github.com/undermoonn/autocomplete/compare/v0.0.8...v0.0.9) (2021-04-05)
 
 ### Bug Fixes
