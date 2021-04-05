@@ -1,4 +1,5 @@
 .input {
+  // TODO: remove tailwind css
   @apply transition;
   @apply border focus:border-blue-400 outline-none focus:shadow;
   @apply py-1 px-3 text-base placeholder-gray-300 w-full;
