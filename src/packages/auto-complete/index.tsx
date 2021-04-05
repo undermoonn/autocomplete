@@ -171,7 +171,7 @@ const AutoComplete = defineComponent({
       <div class={['auto-complete', this.class]}>
         {inputNode}
         <Transition name="select-transform">
-          {this.options.length && this.showOptions ? optionsNode : <span />}
+          {this.options.length && this.showOptions ? optionsNode : null}
         </Transition>
       </div>
     )
