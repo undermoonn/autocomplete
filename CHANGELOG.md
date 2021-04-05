@@ -1,3 +1,9 @@
+## [0.0.8](https://github.com/undermoonn/autocomplete/compare/v0.0.7...v0.0.8) (2021-04-05)
+
+### Bug Fixes
+
+- workflows set nodejs version to 15 ([c68d6ee](https://github.com/undermoonn/autocomplete/commit/c68d6ee065b537e77fe65a96914db30e26088ac0))
+
 ## [0.0.7](https://github.com/undermoonn/autocomplete/compare/v0.0.6...v0.0.7) (2021-04-05)
 
 ### Bug Fixes
