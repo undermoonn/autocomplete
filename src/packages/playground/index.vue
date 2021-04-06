@@ -6,10 +6,12 @@
     @focus="onChange"
     class="w-72"
   />
+  <PlayJsx />
 </template>
 
 <script lang="ts" setup>
 import AutoComplete from '@/packages/auto-complete'
+import PlayJsx from './PlayJsx'
 import { ref } from '@vue/reactivity'
 import { computed } from '@vue/runtime-core'
 function onChange(val: string) {
