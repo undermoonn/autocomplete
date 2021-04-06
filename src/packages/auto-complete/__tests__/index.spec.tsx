@@ -16,9 +16,8 @@ describe('component: AutoComplete', () => {
     })
 
     // test render options
-    const input = wrapper.find('input')
-    input.element.value = '1'
-    await input.trigger('focus')
+    inputValue.value = '1'
+    await wrapper.find('input').trigger('focus')
     expect(wrapper.findAll('.select__item').length).toBe(3)
 
     // test hover
