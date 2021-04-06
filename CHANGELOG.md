@@ -1,3 +1,13 @@
+# [0.1.0](https://github.com/undermoonn/autocomplete/compare/v0.0.10...v0.1.0) (2021-04-06)
+
+### Features
+
+- remove tailwind css to reduce bundle size ([4d1e3ca](https://github.com/undermoonn/autocomplete/commit/4d1e3ca23754895c1e49b9a631f647c6ca48498a))
+
+### Reverts
+
+- Revert "fix: use in product" ([5eaf9ea](https://github.com/undermoonn/autocomplete/commit/5eaf9eaec3a3c0c57a67c527d6801f0e6ae24bb9))
+
 ## [0.0.10](https://github.com/undermoonn/autocomplete/compare/v0.0.9...v0.0.10) (2021-04-05)
 
 ### Bug Fixes
