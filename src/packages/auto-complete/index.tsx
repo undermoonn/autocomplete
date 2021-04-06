@@ -27,8 +27,8 @@ const autoCompleteProps = {
     type: String,
     default: 'input here'
   },
-  onSearch: Function as PropType<(val?: string | number) => void>,
 
+  // improve code intellisense when using jsx
   onChange: Function as PropType<(val?: string | number) => void>,
   onInput: Function as PropType<(val?: string | number) => void>,
   onFocus: Function as PropType<(e: FocusEvent) => void>,
