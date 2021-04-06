@@ -22,7 +22,7 @@ const Input = defineComponent({
     return () => {
       return (
         <input
-          class="input"
+          class="fancy-input"
           v-model={modelVal.value}
           {...inputProps}
           {...attrs}

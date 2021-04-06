@@ -1,13 +1,12 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import jsx from '@vitejs/plugin-vue-jsx'
-import windicss from 'vite-plugin-windicss'
 const { resolve } = require('path')
 const ts = require('rollup-plugin-typescript2')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), jsx(), windicss()],
+  plugins: [vue(), jsx()],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')

@@ -168,7 +168,7 @@ const AutoComplete = defineComponent({
     )
 
     return (
-      <div class={['auto-complete', this.class]}>
+      <div class={['fancy-auto-complete', this.class]}>
         {inputNode}
         <Transition name="select-transform">
           {this.options.length && this.showOptions && this.modelVal

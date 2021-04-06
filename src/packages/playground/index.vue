@@ -22,3 +22,9 @@ const options = computed(() => [
 ])
 const val = ref('111')
 </script>
+
+<style>
+.w-72 {
+  width: 18rem;
+}
+</style>
