@@ -19,7 +19,11 @@ Usage
   <AutoComplete
     v-model="result"
     :options="options"
+    :debounce="300"
     @input="handleInput"
+    @change="handleChange"
+    @focus="handleFocus"
+    @blur="handleBlur"
   />
 </templete>
 
@@ -35,14 +39,18 @@ export default defineComponent({
     const result = ref('')
     const options = ref([])
 
-    const handleInput = () => {
-      // search somethings
-    }
+    // if you set debounce > 0, this event will be debounced
+    const handleChange = (inputValue: string) => {}
+
+    const handleInput = (inputValue: string) => {}
+    const handleFocus = (e: Event) => {}
+    const handleBlur = (e: Event) => {}
 
     return {
       result,
       options,
-      handleInput
+      handleInput,
+      handleChange
     }
   }
 })

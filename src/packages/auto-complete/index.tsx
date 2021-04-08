@@ -21,6 +21,10 @@ const autoCompleteProps = {
     type: Array as PropType<string[]>,
     default: []
   },
+  debounce: {
+    type: Number,
+    default: 0
+  },
   disabled: Boolean,
   class: String,
   placeholder: {
@@ -69,7 +73,7 @@ const AutoComplete = defineComponent({
   emits: ['focus', 'blur', 'change', 'input', UPDATE_MODEL_EVENT],
 
   setup(props, { emit }) {
-    const { modelVal } = useModelValue(props, emit)
+    const { modelVal } = useModelValue(props, emit, props.debounce)
     const {
       showOptions,
       optionIndex,
@@ -99,13 +103,13 @@ const AutoComplete = defineComponent({
             : (showOptions.value = true)
         }
       },
+      onInput(e) {
+        showOptions.value = true
+        emit('input', e.target!.value)
+      },
       onFocus(e) {
         showOptions.value = true
         emit('focus', e)
-      },
-      onInput(e) {
-        showOptions.value = true
-        emit('input', e)
       },
       onBlur(e) {
         showOptions.value = false

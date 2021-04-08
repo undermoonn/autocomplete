@@ -2,7 +2,9 @@
   <auto-complete
     v-model="val"
     :options="options"
+    :debounce="300"
     @change="onChange"
+    @input="onInput"
     @focus="onChange"
     class="w-72"
   />
@@ -15,6 +17,9 @@ import PlayJsx from './PlayJsx'
 import { ref } from '@vue/reactivity'
 import { computed } from '@vue/runtime-core'
 function onChange(val: string) {
+  console.log(val)
+}
+function onInput(val: string) {
   console.log(val)
 }
 const options = computed(() => [
