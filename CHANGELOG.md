@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/undermoonn/autocomplete/compare/v0.1.0...v0.1.1) (2021-04-08)
+
+### Features
+
+- control loading state ([d8d489a](https://github.com/undermoonn/autocomplete/commit/d8d489abf9b38085030f358837007c85e2e9733e))
+- debounce input ([c023189](https://github.com/undermoonn/autocomplete/commit/c023189ba798d1e6feafd4a988d1118fff32d8db))
+
 # [0.1.0](https://github.com/undermoonn/autocomplete/compare/v0.0.10...v0.1.0) (2021-04-06)
 
 ### Features
