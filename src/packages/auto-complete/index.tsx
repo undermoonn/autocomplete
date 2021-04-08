@@ -10,6 +10,7 @@ import useModelValue from '../hooks/useModelValue'
 import { isKeyDown, isKeyEnter, isKeyUp } from '../utils/keyboard'
 import { UPDATE_MODEL_EVENT } from '../utils/constants'
 import Input from '../input'
+import Loading from '../icon/Loading.vue'
 import './styles.scss'
 
 const autoCompleteProps = {
@@ -25,6 +26,7 @@ const autoCompleteProps = {
     type: Number,
     default: 0
   },
+  loading: Boolean,
   disabled: Boolean,
   class: String,
   placeholder: {
@@ -171,11 +173,21 @@ const AutoComplete = defineComponent({
       </div>
     )
 
+    const loadingNode = (
+      <div class="select">
+        <div class="select__loading">
+          {this.$slots.loading ? this.$slots.loading() : <Loading />}
+        </div>
+      </div>
+    )
+
     return (
       <div class={['fancy-auto-complete', this.class]}>
         {inputNode}
         <Transition name="select-transform">
-          {this.options.length && this.showOptions && this.modelVal
+          {this.loading
+            ? loadingNode
+            : this.options.length && this.showOptions && this.modelVal
             ? optionsNode
             : null}
         </Transition>
