@@ -150,4 +150,27 @@ describe('component: AutoComplete', () => {
     await input.trigger('input')
     expect(fn).toBeCalled()
   })
+
+  it('can loading', async () => {
+    const wrapper = mount({
+      render() {
+        return <AutoComplete loading />
+      }
+    })
+    expect(wrapper.find('.select__loading').exists()).toBeTruthy()
+  })
+
+  it('can loading use slot', async () => {
+    const wrapper = mount({
+      components: { AutoComplete },
+      template: `
+        <AutoComplete loading>
+          <template #loading>
+            loading
+          </template>
+        </AutoComplete>
+      `
+    })
+    expect(wrapper.find('.select__loading').exists()).toBeTruthy()
+  })
 })
