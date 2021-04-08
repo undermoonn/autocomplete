@@ -3,7 +3,7 @@ import AutoComplete from '../auto-complete'
 
 const PlayJsx = defineComponent({
   render() {
-    return <AutoComplete />
+    return null
   }
 })
 

@@ -5,29 +5,48 @@
     :debounce="300"
     @change="onChange"
     @input="onInput"
-    @focus="onChange"
     class="w-72"
-  />
+    :loading="loading"
+  >
+    <template #loading>searching...</template>
+  </auto-complete>
   <PlayJsx />
 </template>
 
 <script lang="ts" setup>
+interface Resp {
+  data: string[]
+}
+const fakeApi = (val: string) =>
+  new Promise(resolve => {
+    setTimeout(() => {
+      resolve({
+        data: [`${val}`, `${val}${val}`, `${val}${val}${val}`]
+      })
+    }, 300)
+  }) as Promise<Resp>
+
 import AutoComplete from '@/packages/auto-complete'
 import PlayJsx from './PlayJsx'
 import { ref } from '@vue/reactivity'
-import { computed } from '@vue/runtime-core'
+const options = ref<string[]>([])
+const loading = ref(false)
+const val = ref('')
+
 function onChange(val: string) {
   console.log(val)
+  loading.value = true
+  fakeApi(val)
+    .then(res => {
+      options.value = res.data
+    })
+    .finally(() => {
+      loading.value = false
+    })
 }
 function onInput(val: string) {
-  console.log(val)
+  // console.log(val)
 }
-const options = computed(() => [
-  `${val.value}`,
-  `${val.value}${val.value}`,
-  `${val.value}${val.value}${val.value}`
-])
-const val = ref('111')
 </script>
 
 <style>
