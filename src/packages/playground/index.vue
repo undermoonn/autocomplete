@@ -8,7 +8,7 @@
     class="w-72"
     :loading="loading"
   >
-    <template #loading>searching...</template>
+    <!-- <template #loading>searching...</template> -->
   </auto-complete>
   <PlayJsx />
 </template>
@@ -26,7 +26,7 @@ const fakeApi = (val: string) =>
     }, 300)
   }) as Promise<Resp>
 
-import AutoComplete from '@/packages/auto-complete'
+import AutoComplete from '@/packages/auto-complete/index.vue'
 import PlayJsx from './PlayJsx'
 import { ref } from '@vue/reactivity'
 const options = ref<string[]>([])

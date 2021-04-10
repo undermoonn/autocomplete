@@ -5,7 +5,7 @@ const resolve = (...args) => path.resolve(__dirname, ...args)
 
 // move types files
 const AutoCompleteTypePath = resolve(
-  '../dist/src/packages/auto-complete/index.d.ts'
+  '../dist/src/packages/auto-complete/index.vue.d.ts'
 )
 const AutoCompleteTypeTargetPath = resolve('../dist/AutoComplete.d.ts')
 const EntryScript = resolve('../dist/index.js')

@@ -1,4 +1,4 @@
-import AutoComplete from '..'
+import AutoComplete from '../index.vue'
 import { mount } from '@vue/test-utils'
 import { ref } from '@vue/reactivity'
 import { sleep } from '@/packages/utils/testUtils'
